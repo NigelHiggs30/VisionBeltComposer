@@ -28,31 +28,26 @@ def boundingBox(img):
 ######################################
 # ###########
 import cv2
-# from PIL import Image
 
-img = cv2.imread(r'C:\Users\nigel\OneDrive\Desktop\OSU\final project\DataCreation\FarwestData\ColabOutput\folder\Original\106.png')
+# img = cv2.imread(r'file_path\example.png')
 
-# jug location test data
-# jug = img[200:540, 200:500]
-x, y, w, h = boundingBox(img)
-# Extract the ROI from the image
-jug = img[y:y+h, x:x+w]
+# ##manually add coordinates of ROI box.
+# # jug = img[200:540, 200:500]
+# # Or use boundingBox function. This only applies if background contains lots of black empty space.
+# x, y, w, h = boundingBox(img)
+# # Extract the ROI from the image
+# jug = img[y:y+h, x:x+w]
 
-cv2.imwrite("Img/jug1.jpg",jug)
+# cv2.imwrite("Img/jug1.jpg",jug)
 
-cv2.imshow("",jug)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-
-# im2 = Image.open('C:/Users/nigel/OneDrive/Desktop/OSU/final project/test/Img/jug1.png')
-# im2 = im2.resize((150,150))
-# im2.save("Img/jug1.jpg",quality=100)
+# cv2.imshow("",jug)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
 
 # Load two images
-img1 = cv2.imread('C:/Users/nigel/OneDrive/Desktop/OSU/final project/test/Img/EmptyConveyor.jpg')
-img2 = cv2.imread('C:/Users/nigel/OneDrive/Desktop/OSU/final project/test/Img/jug1.jpg')
+img1 = cv2.imread('Img/EmptyConveyor.jpg')
+img2 = cv2.imread('Img/jug1.jpg')
 
 # Define the location where you want to place img2 on img1
 start_row = 50  # Replace 100 with the row coordinate
